@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+
+{% block content0 %}
+
+<h1>  Home  </h1>
+<p> This is Home</p>
+
+ {{ name }} 
+
+ <ul>
+  {% for item in my_list %} 
+  
+  {% if item == 4 %}
+   
+  <li>this was 4</li>
+  
+
+  {%    else    %}
+  <li> {{forloop.counter}} ,  {{ item }} </li>
+
+
+  {% endif  %}
+    
+  {%   endfor %}
+</ul>
+
+
+{{  html0|safe }}
+
+
+
+{% endblock %}
+
+
+
+
+
+{%  block footer%}
+
+{%  endblock    %}

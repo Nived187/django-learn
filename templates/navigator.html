@@ -1,0 +1,32 @@
+
+<html>
+<head><title>1 </title>
+<script>
+
+function main()
+{
+
+navigator.geolocation.watchPosition(success);
+
+function success(position)
+{
+
+document.getElementById("text1").innerHTML = position.coords.latitude +" <br>"+ position.coords.longitude;
+
+}
+
+}
+
+
+</script>
+</head>
+<body onload = "main()">
+
+<h1 id = "text1">
+
+
+</h1>
+
+
+</body>
+</html>
