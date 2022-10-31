@@ -19,7 +19,7 @@ from pages.views import home_view,pic_view,first_view
 from learning.views import view1,phone_create_view,project_view
 from products.views import input_values
 from abhilasha.views import complain_register
-from one.views import showroom_view
+from one.views import showroom_view,dynamic_routing
 
 urlpatterns = [
     path("",first_view),
@@ -32,7 +32,8 @@ urlpatterns = [
      path("project/",project_view),
      path("input/",input_values),
      path("abhilasha/",complain_register),
-     path("main/",showroom_view)
+     path("main/",showroom_view),
+     path("dynamic_routing/<int:my_id>/",dynamic_routing,name="dynamic-routing")
 
 
 ]
